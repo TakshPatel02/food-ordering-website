@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Playfair Display", serif;
+}
+
+.nav {
+  width: 100%;
+  height: 75px;
+  /* background-color: lightgrey; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 250px;
+}
+
+.list ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.list ul a {
+  transition: 0.3s ease-in-out;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.list ul a {
+  font-style: none;
+  color: black;
+  text-decoration: none;
+}
+
+.list ul a:hover {
+  cursor: pointer;
+  background: lightgray;
+
+}
+
+.list ul a:nth-child(7) {
+  background-color: #AD343E;
+  color: white;
+  padding: 10px;
+}
+
+.form-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 75px);
+  max-height: fit-content;
+  background-color: #f9f9f7;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+}
+
+.form {
+  height: 400px;
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.form-parent .text {
+  margin-bottom: 25px;
+}
+
+#adminForm {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+#adminForm input {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#adminLoginBtn {
+  height: 45px;
+  width: 100%;
+  background-color: #AD343E;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#adminForm label {
+  font-size: 20px;
+}
+
+#admin_credentials {
+  /* text-align: center; */
+  font-size: 18px;
+}
+
+.admin-panel {
+  display: none;
+  background-color: rgb(248, 233, 214);
+}
+
+.admin-panel .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+#logOutBtn {
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background-color: #AD343E;
+  cursor: pointer;
+}
+
+.dashboard {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.dashboard>div {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  min-width: 400px;
+  min-height: 225px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.dashboard>div i {
+  font-size: 50px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.dashboard>div h2 {
+  font-size: 30px;
+  padding-top: 25px;
+  font-weight: 400;
+}
+
+.dashboard>div h1 {
+  font-weight: 400;
+  padding-top: 25px;
+}
+
+.dashboard .db1 i,
+.db1 h1 {
+  color: blue;
+}
+
+.db2 i,
+.db2 h1 {
+  color: green;
+}
+
+.db3 i,
+.db3 h1 {
+  color: purple;
+}
+
+.db4 i,
+.db4 h1 {
+  color: goldenrod;
+}
+
+.order_booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 25px;
+  padding-top: 50px;
+}
+
+.orders,
+.booking {
+  height: 350px;
+  width: 44%;
+  border-radius: 16px;
+  background-color: #fff;
+  text-align: initial;
+}
+
+.orders h1,
+.booking h1 {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+#rOrders {
+  border: 1px solid black;
+  margin: 15px 25px;
+  height: 250px;
+  max-height: 251px;
+  overflow-y: scroll;
+  border-radius: 16px;
+}
+
+.booking ul {
+  border: 1px solid black;
+  margin: 15px 25px;
+  height: 250px;
+  border-radius: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.menu1 {
+  height: 450px;
+  border-radius: 16px;
+  background-color: #fff;
+  width: 44%;
+}
+
+.menu2 {
+  height: 450px;
+  border-radius: 16px;
+  background-color: #fff;
+  width: 44%;
+}
+
+.menu1 h1,
+.menu2 h1 {
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+#addMenuItemForm {
+  border: 1px solid black;
+  margin: 15px 25px;
+  height: 350px;
+  border-radius: 16px;
+  padding: 15px 20px;
+}
+
+.menu-form-rows {
+  display: flex;
+  flex-direction: column;
+  /* gap: 25px; */
+  padding-bottom: 20px;
+}
+
+.menu1 input,
+.menu1 textarea {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu1 label {
+  font-size: 18px;
+}
+
+.add-item-btn {
+  width: 100%;
+  /* padding-top: 15px; */
+  height: 30px;
+  border-radius: 18px;
+  font-size: 18px;
+  border: none;
+}
+
+#menuItemsList {
+  border: 1px solid black;
+  margin: 15px 25px;
+  min-height: 350px;
+  max-height: 350px;
+  border-radius: 16px;
+  /* font-size: 18px; */
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.menu-item span {
+  font-size: 15px;
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css_file/book.css">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <div class="logo">
+      <img src=".../images/Logo.png" alt="">
+    </div>
+    <div class="list">
+      <ul>
+        <a href="../index.html">
+          <li>Home</li>
+        </a>
+        <a href="about.html">
+          <li>About</li>
+        </a>
+        <a href="menu.html">
+          <li>Menu</li>
+        </a>
+        <a href="#" id="cartNav">
+          <li>Cart</li>
+        </a>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
+        <a href="book.html">
+          <li>Book a Tabke</li>
+        </a>
+        <a href="admin.html">
+          <li>Admin Panel <i class="ri-settings-line"></i></li>
+        </a>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="heading">
+    <h1>Book a Table</h1>
+    <p>We consider all the drivers of change gives you the components <br> you need to change to create a truly happens.</p>
+  </div>
+  <div class="booking_form">
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dateinput">Date</label>
+          <input type="date" id="dateinput" name="date" required>
+        </div>
+       <div class="form-group">
+          <label for="timeinput">Time</label>
+          <input type="time" id="timeinput" name="time" required>
+        </div>
+      </div>
+      <div class="form-row">
+         <div class="form-group">
+          <label for="nameinput">Name</label>
+          <input type="text" id="nameinput" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phoneinput">Phone</label>
+          <input type="tel" id="phoneinput" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+        </div>
+      </div>
+      <div class="form-group full-width">
+        <label for="personinput">Total Person</label>
+        <input type="number" id="personinput" name="person" min="1" required>
+      </div>
+      <button type="submit" class="btn1 full-width">Book a Table</button>
+    </form>
+  </div>
+  <div class="map"></div>
+  <div class="footer">
+      <div class="ft1">
+        <ul>
+          <li><img src="../images/logo1.png" alt=""></li>
+          <li>In the new era of technology we look a <br> in the future with certainty and pride to <br> for our company and.</li>
+          <li>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-facebook-line"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-github-line"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="ft2">
+        <h3>Pages</h3>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Menu</li>
+          <li>Pricing</li>
+          <li>Blog</li>
+          <li>Contact</li>
+          <li>Delivery</li>
+        </ul>
+      </div>
+      <div class="ft3">
+        <h3>Utility Pages</h3>
+        <ul>
+          <li>Start Here</li>
+          <li>Styleguide</li>
+          <li>Password prototected</li>
+          <li>404 Not found</li>
+          <li>Licenses</li>
+          <li>Changelog</li>
+          <li>View More</li>
+        </ul>
+      </div>
+      <div class="ft4">
+        <h3>Follow us on instagram</h3>
+        <img src="../images/footerimg.png" alt="">
+      </div>
+
+  </div>
+  <div class="ft5">Copyright © 2023 Hashtag Developer. All Rights Reserved</div>
+  <div class="Cart1" id="cart_modal">
+    <div class="head">
+      <h1>Place Your Order</h1>
+      <h3>Choose your items and provide delivery details to complete your order.
+      </h3>
+      <i class="ri-close-large-line" id="close"></i>
+    </div>
+
+    <div class="cart_flex">
+      <div class="cart_section">
+        <h2>Your Order</h2>
+        <ul id="cart">
+
+        </ul>
+        <h2>Total <span id="total_price"></span></h2>
+      </div>
+      <div class="order_details">
+        <h2>Order Details</h2>
+        <form id="orderForm">
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="ordertype">Order Type *</label>
+          <select id="ordertype" name="ordertype" required>
+            <option value="">Select</option>
+            <option value="pickup">Pickup</option>
+            <option value="delivery">Delivery</option>
+          </select>
+
+          <label for="instructions">Special Instruction *</label>
+          <textarea id="instructions" name="instructions" rows="3"></textarea>
+
+          <button type="submit" class="place_order_btn"><i class="ri-shopping-cart-2-line"></i> Place Order <span id="total_price"></span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded' , function(){
+    const cartModal = document.getElementById('cart_modal');
+    const cartNav = document.getElementById('cartNav')
+    const closebtn = document.getElementById('close')
+    if(cartNav && cartModal){
+        cartNav.addEventListener('click' , function(e){
+            e.preventDefault();
+            cartModal.classList.add('active');
+        })
+    }
+    if(closebtn && cartModal){
+        closebtn.addEventListener('click' , function(){
+            cartModal.classList.remove('active');
+        })
+    }
+})
+</script>
+</html>
