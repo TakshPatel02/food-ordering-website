@@ -81,5 +81,11 @@ For the best experience:
 This issue is related to layout width and scaling, and I'm actively working on making the layout fully responsive without needing zoom adjustments.
 
 
+## ⚠️ Mobile Support
+
+This project is currently optimized for desktop/laptop screens only.  
+Mobile responsiveness will be added in future updates.
+
+
 ---
 
