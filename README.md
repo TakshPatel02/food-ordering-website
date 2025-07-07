@@ -67,7 +67,7 @@ Bistro_Bliss/
 - Developed by Taksh Patel.
 - This website UI was inspired by a free Figma template.  
 You can view the original design here:  
-👉 [Figma Template Link](https://www.figma.com/community/file/1294173080512093987/food-website-design)] 
+👉 [Figma Template Link](https://www.figma.com/community/file/1294173080512093987/food-website-design)
 
 
 ## ⚠️ Known Issue
